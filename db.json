@@ -1,0 +1,60 @@
+{
+  "demande": [
+    {
+      "prenom": "Merry",
+      "nom": "Karara",
+      "email": "karara@awaconsulting.com",
+      "telephone": "778964585",
+      "poids": 60,
+      "taille": 1.75,
+      "besoinEntraineur": "Oui",
+      "genre": "Féminin",
+      "package": "Trimestriel",
+      "important": [
+        "Réduction des graisses toxiques",
+        "Énergie et endurance"
+      ],
+      "faitgym": "Oui",
+      "datedemande": "2023-04-12T00:00:00.000Z",
+      "imc": 0.5551020408163265,
+      "imcResult": "Insuffisance pondérale",
+      "id": 1
+    },
+    {
+      "prenom": "Cherif",
+      "nom": "Aidara",
+      "email": "aidara@ucad.sn",
+      "telephone": "771597836",
+      "poids": 75,
+      "taille": 1.8,
+      "besoinEntraineur": "Oui",
+      "genre": "Masculin",
+      "package": "Trimestriel",
+      "important": [
+        "Construire du muscle maigre"
+      ],
+      "faitgym": "Oui",
+      "datedemande": "2023-04-14T00:00:00.000Z",
+      "imc": 0.30864197530864196,
+      "imcResult": "Insuffisance pondérale",
+      "id": 2
+    },
+    {
+      "prenom": "",
+      "nom": "",
+      "email": "aidarandiaye@esp.sn",
+      "telephone": "",
+      "poids": "",
+      "taille": "",
+      "besoinEntraineur": "",
+      "genre": "",
+      "package": "",
+      "important": "",
+      "faitgym": "",
+      "datedemande": "",
+      "imc": "",
+      "imcResult": "",
+      "id": 3
+    }
+  ]
+}

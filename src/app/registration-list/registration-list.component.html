@@ -1,1 +1,85 @@
-<p>registration-list works!</p>
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+  
+      <!-- Prenom Column -->
+      <ng-container matColumnDef="prenom">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Prénom </th>
+        <td mat-cell *matCellDef="let row"> {{row.prenom}} </td>
+      </ng-container>
+  
+      <!-- Nom Column -->
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+        <td mat-cell *matCellDef="let row"> {{row.nom}} </td>
+      </ng-container>
+  
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+      </ng-container>
+
+       <!-- Telephone Column -->
+       <ng-container matColumnDef="telephone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Téléphone </th>
+        <td mat-cell *matCellDef="let row"> {{row.telephone}} </td>
+      </ng-container>
+
+       <!-- Genre Column -->
+       <ng-container matColumnDef="genre">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Genre </th>
+        <td mat-cell *matCellDef="let row"> {{row.genre}} </td>
+      </ng-container>
+
+      <!-- Package Column -->
+      <ng-container matColumnDef="package">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Package </th>
+        <td mat-cell *matCellDef="let row"> {{row.package}} </td>
+      </ng-container>
+
+      <!-- DateDemande Column -->
+      <ng-container matColumnDef="datedemande">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de demande </th>
+        <td mat-cell *matCellDef="let row"> {{row.datedemande | date}} </td>
+      </ng-container>
+
+       <!-- IMCRESULT Column -->
+       <ng-container matColumnDef="imcResult">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Résultat IMC </th>
+        <td mat-cell *matCellDef="let row"> {{row.imcResult}} </td>
+      </ng-container>
+
+       <!-- Action Column -->
+       <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row">
+            <button [routerLink]="['/detail', row.id]" mat-icon-button color="warn"><i class="fa fa-eye"></i></button>
+            <button (click)="edit(row.id)" mat-icon-button color="accent"><i class="fa fa-pencil"></i></button>
+            <button mat-icon-button color="primary"><i class="fa fa-trash"></i></button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+  
+  
