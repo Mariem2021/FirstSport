@@ -38,23 +38,6 @@
       "imc": 0.30864197530864196,
       "imcResult": "Insuffisance pondérale",
       "id": 2
-    },
-    {
-      "prenom": "",
-      "nom": "",
-      "email": "aidarandiaye@esp.sn",
-      "telephone": "",
-      "poids": "",
-      "taille": "",
-      "besoinEntraineur": "",
-      "genre": "",
-      "package": "",
-      "important": "",
-      "faitgym": "",
-      "datedemande": "",
-      "imc": "",
-      "imcResult": "",
-      "id": 3
     }
   ]
 }
